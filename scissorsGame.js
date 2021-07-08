@@ -1,7 +1,8 @@
 function scissorsGame(usrAction){
+    const actions = ["rock", "paper", "scissors"];
+
     let randomNum = Math.floor(Math.random() * actions.length); //Chooses a random element of actions
     let pcAction = actions[randomNum]; 
-    console.log(randomNum);
     
     //User chooses Rock
     if (usrAction === actions[0] && pcAction === actions[0]){
