@@ -1,33 +1,34 @@
 function scissorsGame(usrAction){
-    const actions = ["rock", "paper", "scissors"];
+    const actions = ["piedra", "papel", "tijeras"];
 
     let randomNum = Math.floor(Math.random() * actions.length); //Chooses a random element of actions
     let pcAction = actions[randomNum]; 
+    paragraph.innerHTML = `El computador elige ${pcAction}. <br>`
     
     //User chooses Rock
     if (usrAction === actions[0] && pcAction === actions[0]){
-        return "Draw";
+        return "Empate";
     } else if (usrAction === actions[0] && pcAction === actions[1]){
-        return "PC Wins";
+        return "Computador gana";
     }else if (usrAction === actions[0] && pcAction === actions[2]){
-        return "User Wins";
+        return "Ganaste!";
     }
 
     //User chooses Paper
     if (usrAction === actions[1] && pcAction === actions[0]){
-        return "User Wins";
+        return "Ganaste!";
     } else if (usrAction === actions[1] && pcAction === actions[1]){
-        return "Draw";
+        return "Empate";
     }else if (usrAction === actions[1] && pcAction === actions[2]){
-        return "PC Wins";
+        return "Computador gana";
     }
 
     //User chooses Scissors
     if (usrAction === actions[2] && pcAction === actions[0]){
-        return "PC Wins";
+        return "Computador gana";
     } else if (usrAction === actions[2] && pcAction === actions[1]){
-        return "User Wins";
+        return "Ganaste!";
     }else if (usrAction === actions[2] && pcAction === actions[2]){
-        return "Draw";
+        return "Empate";
     }
 }
