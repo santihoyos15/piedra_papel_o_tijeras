@@ -5,30 +5,19 @@ function scissorsGame(usrAction){
     let pcAction = actions[randomNum]; 
     paragraph.innerHTML = `El computador elige ${pcAction}. <br>`
     
-    //User chooses Rock
-    if (usrAction === actions[0] && pcAction === actions[0]){
+    if (usrAction === pcAction){
         return "Empate";
-    } else if (usrAction === actions[0] && pcAction === actions[1]){
-        return "Computador gana";
-    }else if (usrAction === actions[0] && pcAction === actions[2]){
+    }
+    //User Wins 
+    else if(usrAction === actions[0] && pcAction === actions[2] ||
+            usrAction === actions[1] && pcAction === actions[0] ||
+            usrAction === actions[2] && pcAction === actions[1])
+        {
         return "Ganaste!";
     }
 
-    //User chooses Paper
-    if (usrAction === actions[1] && pcAction === actions[0]){
-        return "Ganaste!";
-    } else if (usrAction === actions[1] && pcAction === actions[1]){
-        return "Empate";
-    }else if (usrAction === actions[1] && pcAction === actions[2]){
+    //PC Wins
+    else {
         return "Computador gana";
-    }
-
-    //User chooses Scissors
-    if (usrAction === actions[2] && pcAction === actions[0]){
-        return "Computador gana";
-    } else if (usrAction === actions[2] && pcAction === actions[1]){
-        return "Ganaste!";
-    }else if (usrAction === actions[2] && pcAction === actions[2]){
-        return "Empate";
     }
 }
