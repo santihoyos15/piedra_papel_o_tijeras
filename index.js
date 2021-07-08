@@ -19,8 +19,8 @@ paper.addEventListener("click", () => {
 
 //Scissors button
 let scissors = document.getElementById("scissors");
-scissors.addEventListener("tijeras", () => {
-    result = scissorsGame("scissors"); //receives one of these parameters: "rock", "paper", "scissors"
+scissors.addEventListener("click", () => {
+    result = scissorsGame("tijeras"); //receives one of these parameters: "rock", "paper", "scissors"
     paragraph.innerHTML += result;
     console.log(result);
 });
