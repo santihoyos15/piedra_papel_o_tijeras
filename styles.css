@@ -1,7 +1,59 @@
 body {
     background-color: #073b4c;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    background-color: #073b4c;
+    padding: 18px;
+    border-radius: 12px;
     color: aliceblue;
+}
+/* IDs */
+
+#game {
+    color:black;
+    background-color: aliceblue;
+
+    text-align: center;
+
+    width: 70%;
+    height: 70%;
+    padding: 4%;
+    border-radius: 12px;
+}
+
+#result {
+    height: 50%;
+    text-align: center;
+    font-size: x-large;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* classes */
+
+.boton {
+    background-color: #073b4c;
+    margin: 20px;
     font-size: larger;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    border: 0;
+    color: aliceblue;
+    cursor: pointer;
 }
