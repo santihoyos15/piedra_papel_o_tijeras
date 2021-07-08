@@ -1,9 +1,11 @@
 let result;
+let paragraph = document.getElementById("result");
 
 //Rock button
 let rock = document.getElementById("rock");
 rock.addEventListener("click", () => {
     result = scissorsGame("rock"); //receives one of these parameters: "rock", "paper", "scissors"
+    paragraph.innerHTML = result;
     console.log(result);
 });
 
@@ -11,6 +13,7 @@ rock.addEventListener("click", () => {
 let paper = document.getElementById("paper");
 paper.addEventListener("click", () => {
     result = scissorsGame("paper"); //receives one of these parameters: "rock", "paper", "scissors"
+    paragraph.innerHTML = result;
     console.log(result);
 });
 
@@ -18,6 +21,6 @@ paper.addEventListener("click", () => {
 let scissors = document.getElementById("scissors");
 scissors.addEventListener("click", () => {
     result = scissorsGame("scissors"); //receives one of these parameters: "rock", "paper", "scissors"
+    paragraph.innerHTML = result;
     console.log(result);
 });
-
