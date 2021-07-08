@@ -3,24 +3,18 @@ let paragraph = document.getElementById("result");
 
 //Rock button
 let rock = document.getElementById("rock");
-rock.addEventListener("click", () => {
-    result = scissorsGame("piedra"); //receives one of these parameters: "rock", "paper", "scissors"
-    paragraph.innerHTML += result;
-    console.log(result);
-});
+rock.addEventListener("click", () => {printResult("piedra")});
 
 //Paper button
 let paper = document.getElementById("paper");
-paper.addEventListener("click", () => {
-    result = scissorsGame("papel"); //receives one of these parameters: "rock", "paper", "scissors"
-    paragraph.innerHTML += result;
-    console.log(result);
-});
+paper.addEventListener("click", () => {printResult("papel")});
 
 //Scissors button
 let scissors = document.getElementById("scissors");
-scissors.addEventListener("click", () => {
-    result = scissorsGame("tijeras"); //receives one of these parameters: "rock", "paper", "scissors"
+scissors.addEventListener("click", () => {printResult("tijera")});
+
+function printResult(action){
+    result = scissorsGame(action); //receives one of these parameters: "rock", "paper", "scissors"
     paragraph.innerHTML += result;
     console.log(result);
-});
+}

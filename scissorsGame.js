@@ -4,7 +4,7 @@ function scissorsGame(usrAction){
     let randomNum = Math.floor(Math.random() * actions.length); //Chooses a random element of actions
     let pcAction = actions[randomNum]; 
     paragraph.innerHTML = `El computador elige ${pcAction}. <br>`
-    
+    console.log(usrAction);
     if (usrAction === pcAction){
         return "Empate";
     }
